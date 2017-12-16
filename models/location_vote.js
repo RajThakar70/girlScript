@@ -6,4 +6,4 @@ var locationVoteSchema = mongoose.Schema({
 	updateDownvote: String
 });
 
-mongoose.model('LocationVote', locationSchema);
+mongoose.model('LocationVote', locationVoteSchema);

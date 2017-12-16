@@ -2,21 +2,12 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
-var Location = mongoose.model('Location')
+var Location = mongoose.model('Review');
 
 /* GET users listing. */
 router.get('/a', function(req, res, next) {
   var location  = new Location();
-
-  location.locationCoordinates = "String"
-  location.locationName = "String"
-  location.city = "String"
-  location.country = "String"
-  location.state = "String"
-  location.zip = 13
-  location.locationUpVote = 13
-  location.locationDownVote = 13
-  location.locationType = "String",
+  location.reviewId = "fdksjafkj";
   location.save(function(err, p1) {
         if (err) {
           return res.json({

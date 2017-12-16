@@ -5,8 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+
 require('./models/user');
 require('./models/location');
+require('./models/location_vote');
+require('./models/review');
+require('./models/review_response');
 
 var index = require('./routes/index');
 var users = require('./routes/users');

@@ -6,4 +6,4 @@ var reviewResponseSchema = mongoose.Schema({
 	agreeDisagree: String
 });
 
-mongoose.model('ReviewRepsonse', reviewSchema);
+mongoose.model('ReviewRepsonse', reviewResponseSchema);
