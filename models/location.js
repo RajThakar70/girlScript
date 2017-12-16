@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const locationSchema = mongoose.Schema({
+var mongoose = require('mongoose');
+var locationSchema = mongoose.Schema({
   locationCoordinates: String,
   locationName: String,
   city: String,
@@ -11,6 +11,4 @@ const locationSchema = mongoose.Schema({
   locationType: String,
 });
 
-const location = mongoose.model('User', locationSchema);
-
-module.exports = location;
+mongoose.model('Location', locationSchema);

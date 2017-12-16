@@ -5,17 +5,20 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+require('./models/user');
+require('./models/location');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+
 var app = express();
 
 try {
-  mongoose.connect("mongodb://SVN12:svn123@.mlab.com:21989/girlscript", {useMongoClient: true});
+  mongoose.connect("mongodb://SVN12:svn123@ds021989.mlab.com:21989/girlscript",{ useMongoClient: true });
   console.log("connected");
-} catch (e) {
-  console.log("error connecting database: " + e);
+} catch(e){
+  console.log("error connecting database: "+e);
 }
 
 // view engine setup
