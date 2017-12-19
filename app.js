@@ -5,6 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var Location = require('./lib/location');
+
+var lol = Location(40.714224,-73.961452,(data)=>data)
+console.log(lol);
 
 require('./models/user');
 require('./models/location');
